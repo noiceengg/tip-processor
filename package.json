@@ -18,7 +18,7 @@
       "transaction-batching",
       "erc20"
     ],
-    "author": "Your Name",
+    "author": "Noice Engineering",
     "license": "MIT",
     "dependencies": {
       "dotenv": "^16.4.5",

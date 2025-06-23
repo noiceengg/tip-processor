@@ -24,11 +24,12 @@ import {
   
   
   const DATABASE_URL = process.env.DATABASE_URL!;
-  const BASE_RPC_URL = process.env.BASE_RPC_URL || "https:
+  const BASE_RPC_URL = process.env.BASE_RPC_URL!;
   const SERVER_WALLET_PRIVATE_KEY = process.env.SERVER_WALLET_PRIVATE_KEY! as Hex;
   
   const SMART_WALLET_FOR_BATCHING_ADDRESS =
-    process.env.SMART_WALLET_FOR_BATCHING_ADDRESS 
+    process.env.SMART_WALLET_FOR_BATCHING_ADDRESS!
+
   const BATCH_SIZE_ONCHAIN_LIMIT = parseInt(
     process.env.TRANSACTION_BATCH_SIZE || "300",
     10,
@@ -1068,7 +1069,7 @@ import {
   
       
       batchReceipt = await publicClient.waitForTransactionReceipt({
-        hash: currentBatchTxHashHash,
+        hash: currentBatchTxHashHex,
         timeout: RECEIPT_TIMEOUT_SECONDS * 1000, 
       });
   
@@ -1314,5 +1315,3 @@ import {
       process.exit(0);
     });
   }
-  
-  

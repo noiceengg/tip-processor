@@ -1,10 +1,10 @@
-# Noice Tip Processor 
+# Noice Tip Processor
 
-A typescript application that processes transactions for tips sent from/to noice on farcaster. 
+A typescript application that processes transactions for tips sent from/to [noice on farcaster](https://noice.so/). 
 
 ## What it does
 
-This processor handles **batch transaction processing** - collecting pending transactions from the db and executing them efficiently in batches through a smart wallet. This approach significantly reduces gas costs compared to individual tip transaction processing.
+This processor handles **batch transaction processing** - collecting pending transactions from the database and executing them efficiently in batches through an eip 7702 smart wallet. This approach significantly reduces gas costs compared to individual tip transaction processing.
 
 **Key capabilities:**
 - Processes ERC-20 token transfers using `transferFrom` operations
